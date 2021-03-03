@@ -4,3 +4,21 @@ body{
 h1{
     text-align: center;
 }
+.as-btn, button.as-btn, a.as-btn{
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: .25rem;
+    text-transform: uppercase;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+}
+  
+.as-btn-blue {
+    color: #fff;
+    background-color: #008cff;
+    border-color: #008cff
+  }

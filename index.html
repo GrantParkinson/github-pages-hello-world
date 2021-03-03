@@ -11,12 +11,48 @@
   </head>
   <body>
     <script>
-      asAlertMsg({
-        type: "success",
-        title: "This Works!",
-        message: "WOOOOOO",
-      });
+      window.onload = function (evt) {
+        var as_alert_default,
+          as_alert_error,
+          as_alert_warning,
+          as_alert_success,
+          btn_as_alert_default,
+          btn_as_alert_error,
+          btn_as_alert_warning,
+          btn_as_alert_success;
+
+        as_alert_default = document.getElementById("default");
+        as_alert_error = document.getElementById("error");
+        as_alert_warning = document.getElementById("warning");
+        as_alert_success = document.getElementById("success");
+        // ----------------------------------------------------------
+        btn_as_alert_default = document.getElementById("btn-default");
+        btn_as_alert_error = document.getElementById("btn-error");
+        btn_as_alert_warning = document.getElementById("btn-warning");
+        btn_as_alert_success = document.getElementById("btn-success");
+        asAlertMsg({
+          type: "success",
+          title: "This Works!",
+          message: "WOOOOOO",
+        });
+        as_alert_default.addEventListener("click", () => {
+          asAlertMsg("hey test text");
+        });
+
+        as_alert_error.addEventListener("click", () => {
+          asAlertMsg({
+            type: "error",
+          });
+        });
+      };
     </script>
+    <button
+      type="button"
+      id="default"
+      class="as-btn as-btn-sm as-btn-blue as-btn-block"
+    >
+      I think this works!
+    </button>
     <h1>Hello World</h1>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo recusandae
