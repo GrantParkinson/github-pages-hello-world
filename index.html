@@ -30,13 +30,13 @@
         btn_as_alert_error = document.getElementById("btn-error");
         btn_as_alert_warning = document.getElementById("btn-warning");
         btn_as_alert_success = document.getElementById("btn-success");
-        asAlertMsg({
-          type: "success",
-          title: "This Works!",
-          message: "WOOOOOO",
-        });
+
         as_alert_default.addEventListener("click", () => {
-          asAlertMsg("hey test text");
+          asAlertMsg({
+            type: "success",
+            title: "This Works!",
+            message: "WOOOOOO",
+          });
         });
 
         as_alert_error.addEventListener("click", () => {
